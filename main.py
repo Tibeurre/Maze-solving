@@ -32,6 +32,21 @@ def mouse_solving(maze):
     
     return track
 
+def Tremaux_solving(maze):
 
-maze = g.generate(90)
-p.print_track(maze, mouse_solving(maze))
+    maze_marking = maze.copy()
+
+    start = tuple(np.argwhere(maze == 2)[0])
+    current = start
+    previous = (0,0)
+    track = []
+
+    while maze[current] != -1 :
+        track.append(current)
+        neighbors = m.get_neighbors(maze)
+        if len(neighbors)>2:
+            neighbors.remove(previous) ...
+
+
+maze = g.generate(50)
+p.print_track(maze, right_hand_solving(maze))

@@ -33,9 +33,9 @@ def init(n):
 
 def exits(n):
     if head_or_tail():
-        start = (0, rd.randint(2,n-3))
+        start = (rd.randint(2,n-3), rd.randint(2,n-3))
     else :
-        start = (rd.randint(2,n-3),0)
+        start = (rd.randint(2,n-3),rd.randint(2,n-3))
     
     if head_or_tail():
         ex_ind = rd.randint(2,n-3)
